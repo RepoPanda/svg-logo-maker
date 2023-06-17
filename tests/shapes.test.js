@@ -1,14 +1,26 @@
 const { Square, Triangle, Circle } = require("../lib/shapes.js");
 
 // will test the circle class
-describe("Circle", () => {
-    it('should accept a color parameter',  () => {
-       const svgExpected = '<circle cx='
-    })
-});
+test('should render a circle with a fill color of blue',  () => {
+    const svgExpected = '<circle cx="150" cy="75" r="50" fill="blue" />'
+    const circle = new Circle();
+    circle.setColor('blue');
+    expect(circle.render()).toEqual(svgExpected);
+})
+
 
 // will test the triangle class
-describe("Triangle", () => {});
+test('should render a triangle with a fill color of green',  () => {
+    const svgExpected = '<polygon points="150, 18 244, 182 56, 182" fill="green" />'
+    const triangle = new Triangle();
+    triangle.setColor('green');
+    expect(triangle.render()).toEqual(svgExpected);
+});
 
 // will test the square class
-describe("Square", () => {});
+test('should render a square with a fill color of black',  () => {
+    const svgExpected = '<rect x="50" y="50" width="200" height="100" fill="black" />'
+    const square = new Square();
+    square.setColor('black');
+    expect(square.render()).toEqual(svgExpected);
+});
