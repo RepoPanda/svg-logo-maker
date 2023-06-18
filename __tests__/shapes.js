@@ -19,7 +19,7 @@ test('should render a triangle with a fill color of green',  () => {
 
 // will test the square class
 test('should render a square with a fill color of black',  () => {
-    const svgExpected = '<rect x="50" y="10" width="200" height="200" fill="black" />'
+    const svgExpected = '<rect x="75" y="35" width="150" height="150" fill="black" />'
     const square = new Square();
     square.setColor('black');
     expect(square.render()).toEqual(svgExpected);
